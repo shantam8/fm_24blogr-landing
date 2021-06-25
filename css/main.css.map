@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,kFAAI;AACZ,OAAO,CAAC,oFAAI;ADSZ,AAAA,CAAC,CAAA;EACG,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACzB",
+    "sources": [
+        "../scss/main.scss",
+        "../scss/_fonts.scss",
+        "../scss/_mixins.scss",
+        "../scss/_variables.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
