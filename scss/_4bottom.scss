@@ -1,0 +1,25 @@
+section#bottom {
+  margin: 5rem 2rem;
+
+  .img {
+    height: 340px;
+    background-image: url("../images/illustration-laptop-mobile.svg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .textBlock {
+    text-align: center;
+
+    h3 {
+      margin-top: 2.2rem;
+      font-size: 2rem;
+    }
+    p {
+      margin-top: 1.2rem;
+      font-size: 1rem;
+      line-height: 25px;
+      color: $veryDarkGrayishBlue;
+    }
+  }
+}

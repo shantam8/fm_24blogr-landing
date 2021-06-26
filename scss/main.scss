@@ -2,14 +2,53 @@
 @import "mixins";
 @import "variables";
 
-
+@import "1header";
+@import "2top";
+@import "3middle";
+@import "4bottom";
+@import "5footer";
 
 //     font-family: 'Overpass', sans-serif; 3 6
 //     font-family: 'Ubuntu', sans-serif; 4 5 7
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+h1,
+h2,
+h3,
+p {
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+a,
+h4,
+button {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+
+h4 {
+  font-weight: 500;
+}
+button {
+  font-weight: 700;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
 }

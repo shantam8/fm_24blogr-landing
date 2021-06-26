@@ -1,0 +1,52 @@
+section#middle {
+  position: relative;
+  margin-top: 17rem;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/illustration-phones.svg");
+    top: -14rem;
+    left: 0;
+    right: 0;
+
+    height: 100%;
+    z-index: 5;
+  }
+
+  .overflowWrapper {
+    padding: 13rem 3rem 4rem 3rem;
+    text-align: center;
+    color: $white;
+    overflow: hidden;
+    background-color: $middleBG;
+    border-top-right-radius: 80px 90px;
+    border-bottom-left-radius: 80px 90px;
+    position: relative;
+
+    .imgBgSvg {
+      background-size: cover;
+      background-position: center;
+      background-image: url("../images/bg-pattern-circles.svg");
+      height: 110%;
+      position: absolute;
+      top: -13rem;
+      left: 0;
+      right: 0;
+    }
+
+    h2 {
+      font-size: 2rem;
+      position: relative;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      line-height: 20px;
+    }
+  }
+}
