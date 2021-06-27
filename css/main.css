@@ -197,7 +197,7 @@ header .header #mobileMenu .loginBar #btnSignUp:active {
   color: #1f3f5b;
 }
 
-header #mobileMenuBtn {
+header .header #mobileMenuBtn {
   width: 32px;
   height: 32px;
   background-color: transparent;
@@ -208,8 +208,98 @@ header #mobileMenuBtn {
   border: none;
 }
 
-header #mobileMenuBtn.isOpen {
+header .header #mobileMenuBtn.isOpen {
   background-image: url("../images/icon-close.svg");
+}
+
+@media screen and (min-width: 30rem) {
+  header {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  header {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  header #mobileMenuBtn {
+    display: none;
+  }
+  header .header #mobileMenu {
+    position: static;
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-height: unset;
+    background-color: transparent;
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+    overflow: unset;
+  }
+  header .header #mobileMenu .navBar {
+    display: inline;
+    margin: 0;
+  }
+  header .header #mobileMenu .navBar nav {
+    display: inline-block;
+    position: relative;
+  }
+  header .header #mobileMenu .navBar nav button {
+    margin: 0;
+    margin-right: 2rem;
+    font-size: 1rem;
+    color: white;
+  }
+  header .header #mobileMenu .navBar nav button::after {
+    content: url("../images/icon-arrow-light.svg");
+  }
+  header .header #mobileMenu .navBar nav .links {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: -4rem;
+    top: 2rem;
+    background-color: white;
+    -webkit-box-shadow: 0px 10px 20px -5px gray;
+            box-shadow: 0px 10px 20px -5px gray;
+  }
+  header .header #mobileMenu .loginBar {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  header .header #mobileMenu .loginBar button {
+    display: inline;
+    margin: 0;
+  }
+  header .header #mobileMenu .loginBar #btnLogin {
+    margin: 0;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 1rem;
+    color: white;
+  }
+  header .header #mobileMenu .loginBar #btnSignUp {
+    margin: 0;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 1rem;
+  }
 }
 
 header h1 {
@@ -265,6 +355,10 @@ header .flexWrapper #btnStart:active {
   border-color: #1f3f5b;
 }
 
+header .flexWrapper #btnStart:hover {
+  border-color: white;
+}
+
 header .flexWrapper #btnLearn {
   border: 2px solid white;
   background-color: transparent;
@@ -289,6 +383,55 @@ header .flexWrapper #btnLearn:active {
   transition: all 0s linear;
   background-color: #1f3f5b;
   border-color: #1f3f5b;
+}
+
+@media screen and (min-width: 30rem) {
+  header {
+    background-position: -21rem -25rem;
+    background-size: 270%;
+  }
+  header .flexWrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  header {
+    background-position: -32rem -47rem;
+  }
+  header::before {
+    background-image: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+    background-image: linear-gradient(to Right, #ff8f70, #ff3d54);
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  header {
+    background-position: -23rem -41rem;
+    background-size: 220%;
+  }
+  header h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  header {
+    background-position: -15rem -41rem;
+    background-size: 165%;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  header {
+    background-position: -13rem -41rem;
+    background-size: 138%;
+  }
+  header h1 {
+    font-size: 3rem;
+  }
 }
 
 section#top {
