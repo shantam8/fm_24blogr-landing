@@ -1,0 +1,17 @@
+@mixin btnHoverState {
+  transition: all 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    border-color: $lightRed;
+    background-color: $lightRed;
+    color: $white;
+  }
+
+  &:active {
+    transition: all 0s linear;
+    background-color: $veryDarkBlue;
+    border-color: $veryDarkBlue;
+  }
+}

@@ -9,10 +9,16 @@ function toggleSubMenu(selectedBtn) {
         document
         .querySelector(navButton)
         .nextElementSibling.classList.remove("openSubMenu");
+        document
+        .querySelector(navButton)
+        .classList.remove("rotate");
     } else {
         document
         .querySelector(selectedBtn)
         .nextElementSibling.classList.toggle("openSubMenu");
+        document
+        .querySelector(selectedBtn)
+        .classList.toggle("rotate");
     }
   });
 }
@@ -24,6 +30,7 @@ function toggleMobileMenu() {
     mobileMenu.classList.remove("openedMenu");
     toggleSubMenu("closingSubs");
     body.classList.remove("overflowHidden");
+
   } else {
     console.log("opening");
     mobileMenuBtn.classList.add("isOpen");
