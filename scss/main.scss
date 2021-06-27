@@ -45,10 +45,14 @@ button {
   font-weight: 700;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-li{
+li {
   list-style: none;
+}
+
+.overflowHidden{
+  overflow: hidden;
 }

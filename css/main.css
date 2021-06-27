@@ -1,5 +1,229 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+header {
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 2rem 5rem 2rem;
+  background-image: url("../images/bg-pattern-intro.svg");
+  background-repeat: no-repeat;
+  background-size: 300%;
+  background-position: -15rem -9rem;
+  border-bottom-left-radius: 80px 90px;
+  color: white;
+}
+
+header::before {
+  position: absolute;
+  content: "";
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
+  background-image: linear-gradient(to Bottom, #ff8f70, #ff3d54);
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: -1;
+}
+
+header .header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header .logo {
+  width: 90px;
+}
+
+header .header .logo img {
+  width: 100%;
+}
+
+header .header #mobileMenu {
+  position: fixed;
+  content: "";
+  top: 7rem;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+  max-height: 0px;
+  -webkit-transition: max-height 0.3s linear;
+  transition: max-height 0.3s linear;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 10px 20px -5px gray;
+          box-shadow: 0px 10px 20px -5px gray;
+  width: 90%;
+  margin: 0 auto;
+}
+
+header .header #mobileMenu.openedMenu {
+  max-height: 800px;
+}
+
+header .header #mobileMenu .navBar {
+  margin: 2rem;
+}
+
+header .header #mobileMenu .navBar nav button {
+  border: none;
+  background-color: transparent;
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  margin: 1rem;
+  font-size: 1.3rem;
+  color: #25252d;
+}
+
+header .header #mobileMenu .navBar nav button:hover {
+  cursor: pointer;
+  color: red;
+}
+
+header .header #mobileMenu .navBar nav .links {
+  max-height: 0px;
+  background-color: lightgray;
+  border-radius: 8px;
+  -webkit-transition: max-height 0.3s linear;
+  transition: max-height 0.3s linear;
+  overflow: hidden;
+}
+
+header .header #mobileMenu .navBar nav .links.openSubMenu {
+  max-height: 500px;
+}
+
+header .header #mobileMenu .navBar nav .links a {
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  margin: 1rem 0;
+  color: #4b5862;
+  display: block;
+}
+
+header .header #mobileMenu .loginBar {
+  margin: 1rem 2rem;
+  border-top: 1px solid lightgray;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+header .header #mobileMenu .loginBar h4 {
+  color: #4b5862;
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+header .header #mobileMenu .loginBar button {
+  border: none;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+  background-image: linear-gradient(to Right, #ff8f70, #ff3d54);
+  margin: 1rem;
+  font-size: 1.3rem;
+  color: white;
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+header #mobileMenuBtn {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  background-image: url("../images/icon-hamburger.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border: none;
+}
+
+header #mobileMenuBtn.isOpen {
+  background-image: url("../images/icon-close.svg");
+}
+
+header h1 {
+  margin-top: 6rem;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+header p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+header .flexWrapper {
+  margin: 3rem 0 5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .flexWrapper button:first-child {
+  color: #ff525d;
+  background-color: white;
+}
+
+header .flexWrapper button {
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  width: 140px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+}
+
+section#top {
+  margin: 5rem 2rem;
+}
+
+section#top h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+section#top .wrapper .img {
+  height: 340px;
+  background-image: url("../images/illustration-editor-mobile.svg");
+  background-position: center;
+  background-size: cover;
+  max-width: 410px;
+  margin: 0 auto;
+}
+
+section#top .wrapper .textBlock {
+  text-align: center;
+}
+
+section#top .wrapper .textBlock h3 {
+  margin-top: 2.2rem;
+  font-size: 2rem;
+}
+
+section#top .wrapper .textBlock p {
+  margin-top: 1.2rem;
+  font-size: 1rem;
+  line-height: 25px;
+  color: #4b5862;
+}
+
 section#middle {
   position: relative;
   margin-top: 17rem;
@@ -146,5 +370,9 @@ a {
 
 li {
   list-style: none;
+}
+
+.overflowHidden {
+  overflow: hidden;
 }
 /*# sourceMappingURL=main.css.map */
