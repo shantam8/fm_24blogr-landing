@@ -1,35 +1,90 @@
 section#top {
-  margin: 5rem 2rem;
+  padding: 5rem 2rem;
 
   h2 {
+    margin-bottom: 2rem;
     text-align: center;
     font-size: 1.8rem;
-    margin-bottom: 2rem;
   }
 
-  .wrapper {
+  .img {
+    margin: 0 auto;
+    max-width: 410px;
+    height: 340px;
+    background-image: url("../images/illustration-editor-mobile.svg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .textBlock {
+    text-align: center;
+
+    h3 {
+      margin-top: 2.2rem;
+      font-size: 2rem;
+    }
+
+    p {
+      margin-top: 1.2rem;
+      font-size: 1rem;
+      line-height: 25px;
+    }
+  }
+
+  @media screen and (min-width: 40rem) {
+    margin: 5rem;
+
     .img {
-      height: 340px;
-      background-image: url("../images/illustration-editor-mobile.svg");
-      background-position: center;
-      background-size: cover;
-      max-width: 410px;
-      margin: 0 auto;
+      background-image: url("../images/illustration-editor-desktop.svg");
+    }
+  }
+
+  @media screen and (min-width: 50rem) {
+    margin: 7rem;
+  }
+
+  @media screen and (min-width: 64rem) {
+    position: relative;
+    margin-right: 0;
+    overflow: hidden;
+
+    h2 {
+      margin-bottom: 6rem;
+    }
+
+    .img {
+      margin: 0;
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-position: right center;
+      background-repeat: no-repeat;
+      background-size: 75% 100%;
+      transform: translateX(15rem);
+      height: unset;
+      max-width: unset;
     }
 
     .textBlock {
-      text-align: center;
+      margin-right: 55%;
+      text-align: left;
 
       h3 {
-        margin-top: 2.2rem;
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
+
       p {
-        margin-top: 1.2rem;
-        font-size: 1rem;
-        line-height: 25px;
-        color: $veryDarkGrayishBlue;
+        margin-top: 1rem;
+        font-size: 0.8rem;
       }
+    }
+  }
+  @media screen and (min-width: 64rem) {
+    .textBlock {
+      margin-right: 60%;
     }
   }
 }

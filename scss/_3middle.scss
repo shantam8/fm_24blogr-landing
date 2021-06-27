@@ -5,48 +5,101 @@ section#middle {
   &::before {
     position: absolute;
     content: "";
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     background-image: url("../images/illustration-phones.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     top: -14rem;
     left: 0;
     right: 0;
-
     height: 100%;
     z-index: 5;
   }
 
   .overflowWrapper {
-    padding: 13rem 3rem 4rem 3rem;
-    text-align: center;
-    color: $white;
-    overflow: hidden;
-    background-color: $middleBG;
-    border-top-right-radius: 80px 90px;
-    border-bottom-left-radius: 80px 90px;
     position: relative;
+    padding: 13rem 3rem 4rem 3rem;
+    overflow: hidden;
+    color: $white;
+    text-align: center;
+    background-color: $middleBG;
+    border-bottom-left-radius: 80px 90px;
+    border-top-right-radius: 80px 90px;
 
     .imgBgSvg {
-      background-size: cover;
-      background-position: center;
-      background-image: url("../images/bg-pattern-circles.svg");
-      height: 110%;
       position: absolute;
-      top: -13rem;
+      background-image: url("../images/bg-pattern-circles.svg");
+      background-size: 115%;
+      background-position: bottom center;
+      top: 0;
       left: 0;
       right: 0;
+      bottom: 9rem;
+      z-index: 0;
     }
 
     h2 {
-      font-size: 2rem;
       position: relative;
+      font-size: 2rem;
+      color: $white;
     }
 
     p {
+      position: relative;
       margin-top: 1rem;
       font-size: 0.8rem;
       line-height: 20px;
+      color: $white;
+    }
+  }
+
+  @media screen and (min-width: 40rem) {
+    &::before {
+      top: -12rem;
+    }
+
+    .overflowWrapper {
+      padding: 13rem 6rem 4rem 6rem;
+
+      .imgBgSvg {
+        bottom: 2rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 64rem) {
+    margin-top: 10rem;
+
+    &::before {
+      background-position: left;
+      top: -4rem;
+      left: 3rem;
+      height: 144%;
+      width: 100;
+      bottom: 0;
+    }
+
+    .overflowWrapper {
+      padding: 5rem 7rem 5rem 30rem;
+      text-align: left;
+
+      .imgBgSvg {
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        background-size: 61%;
+        left: -10rem;
+        bottom: -7rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 80rem) {
+    &::before {
+      left: 6rem;
+    }
+
+    .overflowWrapper {
+      padding: 6rem 7rem 6rem 38rem;
     }
   }
 }

@@ -5,6 +5,7 @@ section#bottom {
     height: 340px;
     background-image: url("../images/illustration-laptop-mobile.svg");
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
   }
 
@@ -19,7 +20,55 @@ section#bottom {
       margin-top: 1.2rem;
       font-size: 1rem;
       line-height: 25px;
-      color: $veryDarkGrayishBlue;
+    }
+  }
+
+  @media screen and (min-width: 35rem) {
+    .img {
+      height: 377px;
+      background-image: url("../images/illustration-laptop-desktop.svg");
+    }
+  }
+
+  @media screen and (min-width: 40rem) {
+    margin: 4rem;
+    margin-bottom: 5rem;
+
+    .img {
+      background-size: contain;
+    }
+  }
+  @media screen and (min-width: 64rem) {
+    margin-left: 0;
+    margin-right: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+
+    .img {
+      height: 446px;
+      background-position: right;
+      background-size: 100% 100%;
+      transform: translateX(-6rem);
+    }
+    .textBlock {
+      text-align: left;
+      padding-right: 6rem;
+
+      h3 {
+        font-size: 1.5rem;
+      }
+      p {
+        margin-top: 1rem;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 80rem) {
+    .textBlock {
+      padding-right: 10rem;
     }
   }
 }

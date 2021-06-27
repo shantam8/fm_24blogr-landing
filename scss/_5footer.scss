@@ -1,7 +1,6 @@
 footer {
   padding: 4rem;
   background-color: $veryDarkBlackBlue;
-
   border-top-right-radius: 80px 90px;
   text-align: center;
 
@@ -22,8 +21,67 @@ footer {
 
         a {
           color: $grayishBlue;
+
+          &:hover,
+          &:focus {
+            cursor: pointer;
+            border-bottom: 1px solid $grayishBlue;
+          }
+
+          &:active {
+            color: $veryLightRed;
+            border-color: $veryLightRed;
+          }
         }
       }
     }
+  }
+
+  @media screen and (min-width: 40rem) {
+    padding: 3rem 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "logo product" "company connect";
+    align-items: baseline;
+    justify-items: center;
+    row-gap: 2rem;
+
+    img {
+      grid-area: logo;
+      height: 35px;
+    }
+
+    nav {
+      text-align: left;
+
+      ul {
+        li {
+          margin-top: 0;
+          line-height: 30px;
+
+          h4 {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    nav:nth-child(2) {
+      grid-area: product;
+    }
+    nav:nth-child(3) {
+      grid-area: company;
+    }
+    nav:nth-child(4) {
+      grid-area: connect;
+    }
+  }
+
+  @media screen and (min-width: 64rem) {
+    padding: 4rem 8rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "logo product company connect";
   }
 }
